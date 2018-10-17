@@ -1,0 +1,5 @@
+// Connect Database
+//mongodb://paul-admi:paul-admi-94@ds235411.mlab.com:35411/dataform-code-urb-db'
+mongoose.connect('mongodb://paulForm:validacion1@ds131763.mlab.com:31763/validacion-form-node')
+    .then(db => console.log('DB is connected'))
+    .catch(err => console.log(err));
