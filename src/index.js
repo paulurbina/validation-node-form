@@ -10,7 +10,7 @@ mongoose.connect('mongodb://node-form:node-form1994@ds131763.mlab.com:31763/vali
 
 
 //settings
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || 4000);
 
 // middlewares 
 app.use(morgan('dev'));
@@ -20,7 +20,7 @@ app.use(express.json());
 app.use('/', require('./routes/dataform'));
 
 //Static files
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/publicBootstrap'));
 
 //Server is listening
 app.listen(app.get('port'), () => {

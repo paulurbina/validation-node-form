@@ -6,7 +6,7 @@ function iniciar() {
 //ERRORES  
 
 var ERROR = {
-		//Aplicar method map()
+		//Aplicar method map() 
 		Nombre: function(mensaje) {
 			alertify.set('notifier','position', 'top-right');
  			alertify.error(mensaje);
@@ -102,6 +102,7 @@ function validar(e) {
 		alertify.confirm(mensaje).set('labels', {ok:'Ok!', cancel:'Cancel'}).showModal(); 
 	} 
 	if (validarNombre() && validarApellido() && validarTelefono() && validarEmail() && confirmar("Desea enviar sus datos")) {
+		e.preventDefault()
 		return true;
 	} else {
 		e.preventDefault();
