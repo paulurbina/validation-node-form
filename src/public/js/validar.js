@@ -98,14 +98,12 @@ function validarComentarios() {
 
 function validar(e) {
 	borrarError();
-	function confirmar(mensaje) {
-		alertify.confirm(mensaje).set('labels', {ok:'Ok!', cancel:'Cancel'}).showModal(); 
-	} 
-	if (validarNombre() && validarApellido() && validarTelefono() && validarEmail() && confirmar("Desea enviar sus datos")) {
+	if (validarNombre() && validarApellido() && validarTelefono() && validarEmail() && confirm("Desea enviar sus datos")) {
 		e.preventDefault()
 		return true;
 	} else {
 		e.preventDefault();
+		e.stopPropagation();
 		return false;
 	}
 }

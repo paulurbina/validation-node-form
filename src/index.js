@@ -20,7 +20,7 @@ app.use(express.json());
 app.use('/', require('./routes/dataform'));
 
 //Static files
-app.use(express.static(__dirname + '/publicBootstrap'));
+app.use(express.static(__dirname + '/public'));
 
 //Server is listening
 app.listen(app.get('port'), () => {
