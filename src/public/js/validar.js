@@ -5,25 +5,25 @@ function iniciar() {
 
 //ERRORES  
 
-var ERROR = {
-		//Aplicar method map() 
-		Nombre: function(mensaje) {
-			alertify.set('notifier','position', 'top-right');
- 			alertify.error(mensaje);
-		},
-		Apellido: function(mensaje) {
-			alertify.set('notifier','position', 'top-right');
-			alertify.error(mensaje);			
-		},
-		Telefono: function(mensaje) {
-			alertify.set('notifier','position', 'top-right');
-			alertify.error(mensaje);
-		},
-		Email: function(mensaje) {
-			alertify.set('notifier','position', 'top-right');
-			alertify.error(mensaje);
-		}
-}
+// var ERROR = {
+// 		//Aplicar method map() 
+// 		Nombre: function(mensaje) {
+// 			alertify.set('notifier','position', 'top-right');
+//  			alertify.error(mensaje);
+// 		},
+// 		Apellido: function(mensaje) {
+// 			alertify.set('notifier','position', 'top-right');
+// 			alertify.error(mensaje);			
+// 		},
+// 		Telefono: function(mensaje) {
+// 			alertify.set('notifier','position', 'top-right');
+// 			alertify.error(mensaje);
+// 		},
+// 		Email: function(mensaje) {
+// 			alertify.set('notifier','position', 'top-right');
+// 			alertify.error(mensaje);
+// 		}
+// }
 
 
 //VALIDATION
@@ -51,7 +51,7 @@ function validarApellido() {
 			error2(elemento, ERROR.Apellido("Debe tener entre 5 y 10 caract"));
 		}
 		
-		// error(elemento);
+		// error(elemento); 
 		return false;
 	}
 	return true;

@@ -1,4 +1,4 @@
-	// Example starter JavaScript for disabling form submissions if there are invalid fields
+// Example starter JavaScript for disabling form submissions if there are invalid fields
 (function() {
   'use strict';
   window.addEventListener('load', function() {
@@ -14,6 +14,17 @@
         form.classList.add('was-validated');
       }, false);
     });
+    var customControlValidation1 = document.getElementById('customControlValidation1');
+    var aceptarTerm = document.getElementById('aceptarTerm');
+    var cancelarTerm = document.getElementById('cancelarTerm');
+    var exampleModalCenter = document.getElementById('exampleModalCenter');
+    aceptarTerm.addEventListener('click', function() {
+      customControlValidation1.checked = true;
+      $('#exampleModalCenter').modal('hide');
+    }, false);
+    cancelarTerm.addEventListener('click', function() {
+      customControlValidation1.checked = false;
+    }, false);
+
   }, false);
 })();
- 

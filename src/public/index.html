@@ -11,23 +11,8 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-  <!--Alertify-->
-  <script src="js/alertifyJS/alertify.min.js"></script>
+  
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/alertifyCSS/alertify.min.css"/>
-  <!-- Default theme -->
-  <link rel="stylesheet" href="css/alertifyCSS/themes/default.min.css"/>
-  <!-- Semantic UI theme -->
-  <link rel="stylesheet" href="css/alertifyCSS/themes/semantic.min.css">
-  <!-- Bootstrap theme -->
-  <link rel="stylesheet" href="css/alertifyCSS/themes/bootstrap.min.css"/>
-
-  <style>
-    .error {
-      border: 1px red solid;
-    }
-  </style>
 </head>
 <body>
 
@@ -42,7 +27,7 @@
               <label for="">Nombre</label>
               <input type="text" name="nombre" id="nombre" minlength="5" maxlength="15" pattern="[A-Za-z]{4,15}" class="form-control" required>
               <div class="invalid-feedback">
-                Agrega tu nombre
+                Debe ser 5 caracteres como minimo
               </div>
            </div>
 
@@ -51,7 +36,7 @@
               <label for="">Apellido</label>
               <input type="text" name="apellido" id="apellido" minlength="5" maxlength="20" pattern="[A-Za-z]{4,20}" class="form-control" required>
               <div class="invalid-feedback">
-                Ingresa tu apellido
+                Debe ser 5 caracteres como minimo
               </div>
             </div>
           </div>
@@ -61,7 +46,7 @@
                 <label for="">Telefono</label>
                 <input type="text" name="telefono" id="telefono" pattern="[0-9]{9}" class="form-control" required>
                 <div class="invalid-feedback">
-                  Ingresa tu telefono
+                  Ingrese un telefono valido
                 </div>
               </div>
             </div>
@@ -70,7 +55,7 @@
                     <label for="">Email</label>
                       <input id="email" type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" class="form-control" required>
                       <div class="invalid-feedback">
-                        Ingresa tu email
+                        Debe ser valido
                       </div>
                 </div>
             </div>
@@ -85,19 +70,44 @@
          </div>
           <div class="row">
             <div class="col-md-8">
-              <div class="form-check">
-              <input class="form-check-input mt-2" type="checkbox" required>
-              <label class="form-check-label" style="font-size: 20px;">
-                Agree to terms and conditions
-              </label>
-              <div class="invalid-feedback">
-                Debe aceptar los terminos
-              </div>
-            </div>
+                <div class="custom-control custom-checkbox mb-3">
+                    <input type="checkbox" class="custom-control-input" id="customControlValidation1" required>
+                    <label id="terminos" class="custom-control-label" for="customControlValidation1" style="font-size: 20px;">
+                      <a data-toggle="modal" data-target="#exampleModalCenter">Acepta los terminos y servicios</a>
+                    </label>
+                
+
+                    <!-- Modal -->
+                  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalCenterTitle">Terminos y Condiciones</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro nobis libero esse repellat nam? Tempore illo, harum sequi et ad ab assumenda accusantium sit rem fugit, delectus velit ex minima!
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro nobis libero esse repellat nam? Tempore illo, harum sequi et ad ab assumenda accusantium sit rem fugit, delectus velit ex minima!
+
+                          </p>
+                        </div>
+                        <div class="modal-footer">
+                          <button id="cancelarTerm" type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                          <button id="aceptarTerm" type="button" class="btn btn-primary">Acepto</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="invalid-feedback">Debe aceptar los terminos</div>
+                </div>
             </div>
             <div class="col-md-4">
                 <input type="submit" name="enviar" id="enviar" value="Enviar" class="justify-content-around btn btn-primary float-right btn-lg boton-enviar"> 
             </div>
+          </div>
           </div>
         </div>
       </div>
@@ -106,9 +116,6 @@
 </section>
   
   <script type="text/javascript" src="js/validarBootstrap.js"></script>
-<!-- <script src="js/validar.js"></script> -->
-<!-- <script type="text/javascript" src="script.js"></script> -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
 
